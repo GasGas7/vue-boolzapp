@@ -108,7 +108,8 @@ const app = new Vue ({
             console.log(percorso);
 
             return percorso;   
-        }
-    
+            
+        },
 
+        
     }})
