@@ -34,6 +34,7 @@ img{
 }
 .user_name{
     padding: 0;
+    height: 80px;
 }
 .user_name span{
     font-weight: 500;
@@ -114,3 +115,23 @@ img{
 /* /Contatti */
 /* <!-- /Sidebar User --> */
 
+
+/*  <!-- Message User -->  */
+
+.messages{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+.top_chat{
+    height: 80px;
+    background-color: aqua
+}
+
+.chat{
+    height: calc(100% - 160px);
+    background-color: blueviolet;
+}
+.input_chat{
+ height: 80px;
+ background-color: chartreuse;
+}
