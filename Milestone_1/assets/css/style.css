@@ -5,7 +5,7 @@
     margin: 0;
 }
 body{
-    background-color: #D6DBD7;
+    background-color: #D2DBDC;
 }
 .green_banner{
     background-color: #009688;
@@ -28,13 +28,12 @@ img{
 
 /* Nome Utente + Icone */
 .side_bar{
-    background-color: #D6DBD7;
+    background-color: #EAEAEA;
     height: 100%;
     overflow: hidden;
 }
 .user_name{
     padding: 0;
-    height: 80px;
 }
 .user_name span{
     font-weight: 500;
@@ -56,7 +55,7 @@ img{
 .notifiche{
     padding: 20px;
     padding-left: 15px;
-    margin: 10px -15px;
+    margin: 0px -15px 10px;
     background-color: #8EDAFC;
 }
 .notifiche i{
@@ -124,14 +123,19 @@ img{
 }
 .top_chat{
     height: 80px;
-    background-color: aqua
+    background-color:#EAEAEA;
+}
+.top_chat i{
+    color: #B1B1B1;
+    font-size: 25px;
+    padding: 10px;
 }
 
 .chat{
     height: calc(100% - 160px);
-    background-color: blueviolet;
+    background-image:url(../img/mine.jpg);
 }
 .input_chat{
- height: 80px;
- background-color: chartreuse;
+    height: 80px;
+    background-color:#EAEAEA;
 }
