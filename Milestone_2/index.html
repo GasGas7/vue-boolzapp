@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Boolzapp</title>
+</head>
+<body>
+    <!-- BannerVerde -->
+    <div class="green_banner">
+        <div id="app" class="container">
+            <div class="row">
+                <!-- Sidebar User -->
+                <div class="side_bar col-4 d-flex flex-column justify-content-between ">
+
+                    <!-- Nome Utente + Icone -->
+                    <div class="d-flex">
+                        <div class="user_name col-7 d-flex align-items-center">
+                            <img class="img-fluid" src="./assets/img/avatar_io.jpg" alt="">
+                            <span>Nome Utente</span>
+                        </div>
+                        <div class="icons_username col-4 offset-1 d-flex align-items-center justify-content-between">
+                            <i class="fas fa-circle-notch"></i>
+                            <i class="fas fa-comment-alt"></i>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- /Nome Utente + Icone -->
+
+                    <!-- Notifiche  -->
+                    <div class="notifiche d-flex align-items-center">
+                        <div>
+                            <i class="fas fa-bell-slash"></i> 
+                        </div>
+                        <div class="d-flex flex-column">
+                            <span>Ricevi notifiche di nuovi messaggi</span>
+                            <a href="#">Attiva notifiche desktop</a>  
+                        </div>
+                    </div>
+                    <!-- /Notifiche  -->
+
+                    <!-- SearchBar -->
+                    <div class="col-">
+                        <div class="search_bar d-flex align-items-center justify-content-between p-1" style="background-color: white;">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Cerca o inizia una nuova chat">
+                        </div>
+                    </div>
+                    <!-- /SearchBar -->
+
+                    <!-- Contacts -->
+                    <div class="contatti">
+                        <div class="contatto" v-for="(contact, indiceContact) in contacts">
+                            <div class="d-flex">
+                                <img class="img-fluid" :src="percorsoFoto(indiceContact)" alt="">
+                                <p>{{contact.name}}</p>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                    <!-- /Contacts -->
+
+
+                </div>
+                <!-- /Sidebar User -->
+
+                <!-- Message User -->
+                <div class="messages col-8">
+                    <!-- Top_Chat_Contatto -->
+                        <div class="top_chat col-12 d-flex justify-content-between align-items-center">
+                            <div class="utente_attivo p-0 col-6 d-flex align-items-center">
+                                <div class="col-3 d-flex">
+                                    <img src="./assets/img/avatar_1.jpg" alt=""> 
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <span>Michele</span>
+                                    <span>Ultimo accesso oggi alle</span>
+                                </div>
+                            </div>
+                            <div class="icons_chat">
+                                <i class="fas fa-search"></i>
+                                <i class="fas fa-paperclip"></i>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                        </div>
+                    <!-- /Top_Chat_Contatto -->
+
+                    <!-- Chat -->
+                        <div class="chat col-12 d-flex flex-column">
+                            <div>
+                                <!-- messaggio ricevuto -->
+                                <div class="messaggio_ricevuto col-6 offset-6">
+                                    testo Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, consequuntur. Fuga Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ratione eum vel corrupti, alias excepturi praesentium vitae enim quis voluptatum facilis dolorum! Excepturi cum neque 
+                                </div>
+                                <!-- /messaggio ricevuto -->
+                                <!-- messaggio inviato -->
+                                <div class="messaggio_inviato col-6">
+                                    testo Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor vero omnis aliquid magnam incidunt, blanditiis facere, minima sequi qui, nemo ipsum numquam totam! Soluta doloribus dicta molestiae quia ducimus beatae?
+                                </div>
+                                <!-- /messaggio inviato -->
+                            </div>
+                            
+                        </div>
+                    <!-- /Chat -->
+
+                    <!-- Input_Chat -->
+                    <div class="input_chat col-12 d-flex align-items-center">
+                        <div class="col-1">
+                            <i class="far fa-smile"></i>
+                        </div>
+                        <div class="col-10">
+                            <input type="text" placeholder="Scrivi un messaggio">
+                        </div>
+                        <div class="col-1">
+                            <i class="fas fa-microphone"></i>
+                        </div>
+                        
+                    </div>
+                    <!-- /Input_Chat -->
+                </div>  
+                <!-- /Message User -->
+            </div>
+        </div>
+    </div>
+
+
+    <!-- VueJS script -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- main.js script -->
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+<!--
+
+    Milestone 1:
+
+    Replica della grafica con la possibilità di avere messaggi scritti dall’utente (verdi) e dall’interlocutore (bianco) assegnando due classi CSS diverse
+
+    Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, visualizzare nome e immagine di ogni contatto. 
+
+-->
