@@ -13,15 +13,21 @@ body{
     padding: 20px;
 }
 .container{
-    width: 80%;
     height: calc(100vh - 40px);
     background-color: red;
+}
+.row{
+    height: 100%;
+}
+img{ 
+    border-radius: 50%;
 }
 /* /Utility class */
 
 /* <!-- Sidebar User --> */
 .side_bar{
     background-color: royalblue;
+    height: 100%;
 }
 .user_name{
     padding: 0;
@@ -32,11 +38,25 @@ body{
     padding-left: 10px;
     line-height: 80px;
 }
-img{ 
+.user_name img{
     width:30%;
-    border-radius: 50%;
 }
-.icon_username i {
-    
+.icons_username>i {
+    font-size: 25px;
+    padding: 10px;
+}
+.contatti{
+    background-color: #FFFFFF;
+    padding-left: inherit;
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-top: 20px;
+    overflow-y: auto;
+}
+.contatto img{
+    width: 25%;
+}
+.contatto p{
+    margin-left: 15px;
 }
 /* <!-- /Sidebar User --> */
