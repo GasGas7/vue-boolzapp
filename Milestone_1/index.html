@@ -18,31 +18,60 @@
         <div id="app" class="container">
             <div class="row">
                 <!-- Sidebar User -->
-                <div class="side_bar col-4 d-flex justify-content-between">
+                <div class="side_bar col-4 d-flex flex-column justify-content-between ">
 
                     <!-- Nome Utente + Icone -->
-                    <div class="user_name col-7 d-flex align-items-center">
-                        <img class="img-fluid"src="./assets/img/avatar_io.jpg" alt="">
-                        <span>Nome Utente</span>
+                    <div class="d-flex">
 
+                        <div class="user_name col-7 d-flex align-items-center">
+                            <img class="img-fluid"src="./assets/img/avatar_io.jpg" alt="">
+                            <span>Nome Utente</span>
+                        </div>
+                        <div class="icons_username col-4 offset-1 d-flex align-items-center justify-content-between">
+                            <i class="fas fa-circle-notch"></i>
+                            <i class="fas fa-comment-alt"></i>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
                     </div>
-                    <div class="icons_username col-4 offset-1 d-flex align-items-center justify-content-between">
-                        <i class="fas fa-circle-notch"></i>
-                        <i class="fas fa-comment-alt"></i>
-                        <i class="fas fa-ellipsis-v"></i>
-                    </div>
+                    
                     <!-- /Nome Utente + Icone -->
+
+                    <!-- Notifiche  -->
+                    <div class="notifiche">
+                        <i class="fas fa-bell-slash"></i>
+                        <span>Ricevi notifiche di nuovi messaggi</span>
+                        <a href="#">Ricevi notifiche desktop</a>
+                    </div>
+                    <!-- /Notifiche  -->
+
+                    <!-- SearchBar -->
+                    <div class="col-">
+                        <div class="search_bar p-1" style="background-color: white;">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </div>
+                    <!-- /SearchBar -->
+
+                    <!-- Contacts -->
+                    <div class="contatti">
+                        <div v-for="contact in contacts">
+                            <p>{{contact.name}}</p>
+
+                        </div>
+                    </div>
+                    <!-- /Contacts -->
+
 
                 </div>
                 <!-- /Sidebar User -->
 
                 <!-- Message User -->
                 <div class="messages col-8"></div>
+                </div>
                 <!-- /Message User -->
             </div>
         </div>
     </div>
-    
     
 
 
