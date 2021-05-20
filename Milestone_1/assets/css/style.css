@@ -1,3 +1,4 @@
+/* Utility class */
 *{
     box-sizing: border-box;
     padding: 0;
@@ -9,9 +10,33 @@ body{
 .green_banner{
     background-color: #009688;
     height:100px;
-    padding: 50px;
+    padding: 20px;
 }
 .container{
-    height: 500px;
+    width: 80%;
+    height: calc(100vh - 40px);
     background-color: red;
 }
+/* /Utility class */
+
+/* <!-- Sidebar User --> */
+.side_bar{
+    background-color: royalblue;
+}
+.user_name{
+    padding: 0;
+}
+.user_name span{
+    font-weight: 500;
+    font-size: 20px;
+    padding-left: 10px;
+    line-height: 80px;
+}
+img{ 
+    width:30%;
+    border-radius: 50%;
+}
+.icon_username i {
+    
+}
+/* <!-- /Sidebar User --> */

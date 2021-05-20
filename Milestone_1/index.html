@@ -15,10 +15,30 @@
 <body>
     <!-- BannerVerde -->
     <div class="green_banner">
-        <div class="container">
+        <div id="app" class="container">
             <div class="row">
-                <div class="col-4"></div>
-                <div class="col-8"></div>
+                <!-- Sidebar User -->
+                <div class="side_bar col-4 d-flex justify-content-between">
+
+                    <!-- Nome Utente + Icone -->
+                    <div class="user_name col-7 d-flex align-items-center">
+                        <img class="img-fluid"src="./assets/img/avatar_io.jpg" alt="">
+                        <span>Nome Utente</span>
+
+                    </div>
+                    <div class="icons_username col-4 offset-1 d-flex align-items-center justify-content-between">
+                        <i class="fas fa-circle-notch"></i>
+                        <i class="fas fa-comment-alt"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                    <!-- /Nome Utente + Icone -->
+
+                </div>
+                <!-- /Sidebar User -->
+
+                <!-- Message User -->
+                <div class="messages col-8"></div>
+                <!-- /Message User -->
             </div>
         </div>
     </div>
