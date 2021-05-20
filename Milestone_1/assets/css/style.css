@@ -121,14 +121,25 @@ img{
     padding-right: 0px;
     padding-left: 0px;
 }
+
+
 .top_chat{
     height: 80px;
     background-color:#EAEAEA;
+}
+.top_chat img{
+    width: 100%;
 }
 .top_chat i{
     color: #B1B1B1;
     font-size: 25px;
     padding: 10px;
+}
+.utente_attivo span:first-child{
+    font-weight: 500;
+}
+.utente_attivo span:last-child{
+    font-size: 15px;
 }
 
 .chat{
