@@ -150,3 +150,17 @@ img{
     height: 80px;
     background-color:#EAEAEA;
 }
+.input_chat i{
+    font-size: 30px;
+    color: #6B7376;
+}
+.input_chat input{
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 0;
+}
+.input_chat input::placeholder{
+    padding-left:15px;
+    font-size: 0.9rem;
+}
