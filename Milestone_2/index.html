@@ -93,10 +93,10 @@
 
                     <!-- Chat -->
                         <div class="chat col-12 d-flex flex-column">
-                            <div class="d-flex flex-column flex-wrap">
+                            <div class="d-flex flex-column">
                                 <!-- messaggio -->
-                                <div class="messaggio col-6" v-for="(messaggio, indiceMessaggio) in contacts[counter].messages" :class="messaggio.status == 'sent' ? 'sent_message' : 'received_message'">
-                                    {{messaggio.text}}
+                                <div class="messaggio col-6 m-1 rounded" v-for="(messaggio, indiceMessaggio) in contacts[counter].messages" :class="messaggio.status == 'sent' ? 'sent_message' : 'received_message'">
+                                    <p>{{messaggio.text}}</p>
                                 </div>
                                 <!-- /messaggio -->
                             </div>

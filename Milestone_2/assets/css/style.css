@@ -122,11 +122,9 @@ img{
 }
 
 .sent_message{
-    align-items: flex-end;
     background-color: #009688;
 }
 .received_message{
-    align-items: flex-start;
     background-color: white;
 }
 .top_chat{

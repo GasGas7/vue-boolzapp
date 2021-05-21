@@ -92,6 +92,7 @@ const app = new Vue ({
                 ],
             },
         ],
+
         
     },
 
