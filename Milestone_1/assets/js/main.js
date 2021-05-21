@@ -91,9 +91,11 @@ const app = new Vue ({
                     }
                 ],
             },
-        ]
+        ],
+        nameSelect:"",
 
-
+        imageSelect:"",
+        
 
     },
 
@@ -102,6 +104,9 @@ const app = new Vue ({
         selectContact(indice){
             console.log(indice)
             this.counter=indice;
+            this.nameSelect=this.contacts[this.counter].name;
+            console.log(this.nameSelect);
+            this.imageSelect = this.contacts[this.counter].avatar;
             return this.counter;
         }
 
