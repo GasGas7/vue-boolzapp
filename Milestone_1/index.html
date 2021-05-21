@@ -76,10 +76,10 @@
                         <div class="top_chat col-12 d-flex justify-content-between align-items-center">
                             <div class="utente_attivo p-0 col-6 d-flex align-items-center">
                                 <div class="col-3 d-flex">
-                                    <img src="./assets/img/avatar_1.jpg" alt=""> 
+                                    <img :src="'./assets/img/avatar'+ imageSelect + '.jpg'" alt=""> 
                                 </div>
                                 <div class="d-flex flex-column">
-                                    <span>Michele</span>
+                                    <span>{{nameSelect}}</span>
                                     <span>Ultimo accesso oggi alle</span>
                                 </div>
                             </div>

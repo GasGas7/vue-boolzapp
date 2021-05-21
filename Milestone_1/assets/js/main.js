@@ -107,6 +107,7 @@ const app = new Vue ({
             this.nameSelect=this.contacts[this.counter].name;
             console.log(this.nameSelect);
             this.imageSelect = this.contacts[this.counter].avatar;
+            console.log(this.imageSelect);
             return this.counter;
         }
 
