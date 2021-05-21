@@ -4,7 +4,7 @@ const app = new Vue ({
 
     data:{
 
-        image:"./assets/img/avatar",
+        counter:0,
 
         contacts: [
             {
@@ -99,17 +99,10 @@ const app = new Vue ({
 
     methods:{
         
-        percorsoFoto(indice){
+        selectContact(indice){
+            console.log(indice)
+            this.counter=indice;
+            return this.counter;
+        }
 
-            const contatto = this.contacts[indice];
-
-            const percorso = this.image + contatto.avatar + ".jpg";
-
-            console.log(percorso);
-
-            return percorso;   
-            
-        },
-
-        
     }})

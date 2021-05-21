@@ -58,17 +58,15 @@
 
                     <!-- Contacts -->
                     <div class="contatti">
-                        <div class="contatto" v-for="(contact, indiceContact) in contacts">
+                        <div class="contatto" v-for="(contact, indiceContact) in contacts" @click="selectContact(indiceContact)">
                             <div class="d-flex">
-                                <img class="img-fluid" :src="percorsoFoto(indiceContact)" alt="">
+                                <img class="img-fluid" :src="'./assets/img/avatar'+ contact.avatar + '.jpg'" alt="">
                                 <p>{{contact.name}}</p>
                             </div>
                             <hr>
                         </div>
                     </div>
                     <!-- /Contacts -->
-
-
                 </div>
                 <!-- /Sidebar User -->
 
