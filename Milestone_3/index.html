@@ -93,21 +93,14 @@
 
                     <!-- Chat -->
                         <div class="chat col-12">
-                            <!-- <div class=""> -->
-                                <!-- messaggio -->
-                                <!-- <div class="messaggio col-4  m-1 rounded" v-for="(messaggio, indiceMessaggio) in contacts[counter].messages" :class="messaggio.status == 'sent' ? 'sent_message ' : 'received_message'">
-                                    <div>
-                                        <p>{{messaggio.text}}</p>
-                                        
-                                    </div> -->
-                                    
-                                    <div class="chat col-12">
+                                 <div class="chat col-12">
                                         <div class="d-flex flex-column">
                                             <!-- messaggio -->
-                                            <div class="messaggio col-6 m-1 rounded" v-for="(messaggio, indiceMessaggio) in contacts[counter].messages" :class="messaggio.status == 'sent' ? 'sent_message  ' : 'received_message'">
+                                            <div class="messaggio col-6 m-1 rounded" v-for="(messaggio, indiceMessaggio) in contacts[counter].messages" :class="messaggio.status == 'sent' ? 'sent_message' : 'received_message'">
                                                 <p>{{messaggio.text}}</p>
                                                 <p>{{messaggio.date}}</p>
                                             </div>
+                                            <div id="sms_sent" class="messaggio col-6 m-1 rounded sent_message"></div>
                                             <!-- /messaggio -->
                                         </div>
 
@@ -124,7 +117,7 @@
                             <i class="far fa-smile"></i>
                         </div>
                         <div class="col-10">
-                            <input type="text" placeholder="Scrivi un messaggio">
+                            <input type="text" v-model="newMessage" placeholder="Scrivi un messaggio" @keyup.enter="sentMessage">
                         </div>
                         <div class="col-1">
                             <i class="fas fa-microphone"></i>

@@ -93,7 +93,7 @@ const app = new Vue ({
             },
         ],
 
-        
+        newMessage:""
     },
 
     methods:{
@@ -102,6 +102,15 @@ const app = new Vue ({
             console.log(indice)
             this.counter=indice;
             return this.counter;
+        },
+
+        sentMessage(){
+            if(this.newMessage.length > 0) {
+                document.getElementById("sms_sent").insertAdjacentHTML('beforeend',
+                `<p>${this.newMessage}</p>
+                `)
+                this.newMessage="";
+            }
         }
 
     }})
