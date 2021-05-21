@@ -93,25 +93,16 @@
 
                     <!-- Chat -->
                         <div class="chat col-12">
-                                 <div class="chat col-12">
-                                        <div id="elenco_messaggi" class=" d-flex flex-column">
-                                            <!-- messaggio -->
-                                            <div class="messaggio col-6 m-1 rounded" v-for="(messaggio, indiceMessaggio) in contacts[counter].messages" :class="messaggio.status == 'sent' ? 'sent_message' : 'received_message'">
-                                                <p>{{messaggio.text}}</p>
-                                                <p>{{messaggio.date}}</p>
-                                                
-                                            </div>
-
-                                            <!-- <div id="sms_sent" class="messaggio col-6 m-1 rounded sent_message"></div> -->
-
-                                            <!-- <div id="sms_received" class="messaggio col-6 m-1 rounded received_message"></div> -->
-                                            <!-- /messaggio -->
-                                        </div>
-
-                                </div>
-                                <!-- /messaggio -->
-                            <!-- </div> -->
-                            
+                            <div class="lista_messaggi col-12">
+                                <div id="elenco_messaggi" class=" d-flex flex-column">
+                                   <!-- messaggio -->
+                                   <div class="messaggio col-6 m-1 rounded" v-for="(messaggio, indiceMessaggio) in contacts[counter].messages" :class="messaggio.status == 'sent' ? 'sent_message' : 'received_message'">
+                                       <p>{{messaggio.text}}</p>
+                                       <p>{{messaggio.date}}</p>          
+                                   </div>
+                                    <!-- /messaggio -->
+                               </div>
+                           </div>                            
                         </div>
                     <!-- /Chat -->
 
