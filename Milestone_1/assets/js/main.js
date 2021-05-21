@@ -111,3 +111,5 @@ const app = new Vue ({
         }
 
     }})
+    
+    // console.log(this.contacts[this.counter].messages[n].text)
