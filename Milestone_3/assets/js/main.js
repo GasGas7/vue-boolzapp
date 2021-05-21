@@ -93,7 +93,8 @@ const app = new Vue ({
             },
         ],
 
-        newMessage:""
+        newMessage:"",
+
     },
 
     methods:{
@@ -106,13 +107,16 @@ const app = new Vue ({
 
         sentMessage(){
             if(this.newMessage.length > 0) {
-                document.getElementById("sms_sent").insertAdjacentHTML('beforeend',
-                `<p>${this.newMessage}</p>
+                document.getElementById("elenco_messaggi").insertAdjacentHTML('beforeend',
+                `<div class="messaggio col-6 m-1 rounded sent_message"><p>${this.newMessage}</p></div>
                 `)
                 this.newMessage="";
             }
-        }
-
-    }})
-    
-    // console.log(this.contacts[this.counter].messages[n].text)
+            setTimeout(function(){
+                let answerMessage="Ehi amico, certo ! Questa è la mia risposta dopo un solo secondo !!";
+                document.getElementById("elenco_messaggi").insertAdjacentHTML('beforeend',
+                `<div class="messaggio col-6 m-1 rounded received_message"><p>${answerMessage}</p></div>
+                `)
+            },1000)
+        },
+}})
