@@ -92,11 +92,10 @@ const app = new Vue ({
                 ],
             },
         ],
-        nameSelect:"",
+        nameSelect:"Michele",
 
-        imageSelect:"",
+        imageSelect:"_1",
         
-
     },
 
     methods:{
