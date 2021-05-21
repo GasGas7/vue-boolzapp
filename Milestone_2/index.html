@@ -94,16 +94,11 @@
                     <!-- Chat -->
                         <div class="chat col-12 d-flex flex-column">
                             <div>
-                                <!-- messaggio ricevuto -->
-                                <div class="messaggio col-6 offset-6">
-                                    testo Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, consequuntur. Fuga Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ratione eum vel corrupti, alias excepturi praesentium vitae enim quis voluptatum facilis dolorum! Excepturi cum neque 
+                                <!-- messaggio -->
+                                <div class="messaggio col-6" v-for="(messaggio, indiceMessaggio) in contacts[counter].messages">
+                                    {{messaggio.text}} 
                                 </div>
-                                <!-- /messaggio ricevuto -->
-                                <!-- messaggio inviato -->
-                                <div class="messaggio_inviato col-6">
-                                    testo Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor vero omnis aliquid magnam incidunt, blanditiis facere, minima sequi qui, nemo ipsum numquam totam! Soluta doloribus dicta molestiae quia ducimus beatae?
-                                </div>
-                                <!-- /messaggio inviato -->
+                                <!-- /messaggio -->
                             </div>
                             
                         </div>
