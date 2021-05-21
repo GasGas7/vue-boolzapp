@@ -92,14 +92,28 @@
                     <!-- /Top_Chat_Contatto -->
 
                     <!-- Chat -->
-                        <div class="chat col-12 d-flex flex-column">
-                            <div class="d-flex flex-column">
+                        <div class="chat col-12">
+                            <!-- <div class=""> -->
                                 <!-- messaggio -->
-                                <div class="messaggio col-6 m-1 rounded" v-for="(messaggio, indiceMessaggio) in contacts[counter].messages" :class="messaggio.status == 'sent' ? 'sent_message' : 'received_message'">
-                                    <p>{{messaggio.text}}</p>
+                                <!-- <div class="messaggio col-4  m-1 rounded" v-for="(messaggio, indiceMessaggio) in contacts[counter].messages" :class="messaggio.status == 'sent' ? 'sent_message ' : 'received_message'">
+                                    <div>
+                                        <p>{{messaggio.text}}</p>
+                                        
+                                    </div> -->
+                                    
+                                    <div class="chat col-12">
+                                        <div class="d-flex flex-column">
+                                            <!-- messaggio -->
+                                            <div class="messaggio col-6 m-1 rounded" v-for="(messaggio, indiceMessaggio) in contacts[counter].messages" :class="messaggio.status == 'sent' ? 'sent_message  ' : 'received_message'">
+                                                <p>{{messaggio.text}}</p>
+                                                <p>{{messaggio.date}}</p>
+                                            </div>
+                                            <!-- /messaggio -->
+                                        </div>
+
                                 </div>
                                 <!-- /messaggio -->
-                            </div>
+                            <!-- </div> -->
                             
                         </div>
                     <!-- /Chat -->
