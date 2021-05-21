@@ -58,17 +58,15 @@
 
                     <!-- Contacts -->
                     <div class="contatti">
-                        <div class="contatto" v-for="(contact, indiceContact) in contacts">
+                        <div class="contatto" v-for="(contact, indiceContact) in contacts" @click="selectContact(indiceContact)">
                             <div class="d-flex">
-                                <img class="img-fluid" :src="percorsoFoto(indiceContact)" alt="">
+                                <img class="img-fluid" :src="'./assets/img/avatar'+ contact.avatar + '.jpg'" alt="">
                                 <p>{{contact.name}}</p>
                             </div>
                             <hr>
                         </div>
                     </div>
                     <!-- /Contacts -->
-
-
                 </div>
                 <!-- /Sidebar User -->
 
@@ -78,10 +76,10 @@
                         <div class="top_chat col-12 d-flex justify-content-between align-items-center">
                             <div class="utente_attivo p-0 col-6 d-flex align-items-center">
                                 <div class="col-3 d-flex">
-                                    <img src="./assets/img/avatar_1.jpg" alt=""> 
+                                    <img :src="'./assets/img/avatar'+ contacts[counter].avatar + '.jpg'" alt=""> 
                                 </div>
                                 <div class="d-flex flex-column">
-                                    <span>Michele</span>
+                                    <span>{{contacts[counter].name}}</span>
                                     <span>Ultimo accesso oggi alle</span>
                                 </div>
                             </div>
@@ -97,7 +95,7 @@
                         <div class="chat col-12 d-flex flex-column">
                             <div>
                                 <!-- messaggio ricevuto -->
-                                <div class="messaggio_ricevuto col-6 offset-6">
+                                <div class="messaggio col-6 offset-6">
                                     testo Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, consequuntur. Fuga Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ratione eum vel corrupti, alias excepturi praesentium vitae enim quis voluptatum facilis dolorum! Excepturi cum neque 
                                 </div>
                                 <!-- /messaggio ricevuto -->
@@ -140,6 +138,19 @@
 </html>
 
 
+
+
+
+
+<!--
+
+    Milestone 1:
+
+    Replica della grafica con la possibilità di avere messaggi scritti dall’utente (verdi) e dall’interlocutore (bianco) assegnando due classi CSS diverse
+
+    Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, visualizzare nome e immagine di ogni contatto. 
+
+-->
 
 
 
