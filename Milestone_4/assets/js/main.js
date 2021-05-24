@@ -95,6 +95,8 @@ const app = new Vue ({
 
         newMessage:"",
 
+        newContacts:[],
+
         contactModel:"",
 
     },
@@ -123,14 +125,12 @@ const app = new Vue ({
         },
 
         searchContact(){
-            this.contacts.forEach(elemento, index => {
-                if(elemento.name != this.contactModel){
-                    this.contacts.splice(index, 1)
+            this.newContacts = this.contacts.filter((contatto)=> {
+                if(contatto.name.split("").includes(this.contactModel)){
+                    return console.log(this.newContacts)
                 }
-                console.log(elemento.name)
-                contactList.push(elemento.name)              
-            });
-            console.log(contactList);
+            }) 
+           
         }
 }})
 
