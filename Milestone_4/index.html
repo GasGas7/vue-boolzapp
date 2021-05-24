@@ -93,7 +93,7 @@
 
                     <!-- Chat -->
                         <div class="chat col-12">
-                            <div class="lista_messaggi">
+                            <div class="lista_messaggi col-12">
                                 <div id="elenco_messaggi" class=" d-flex flex-column">
                                    <!-- messaggio -->
                                    <div class="d-flex flex-column messaggio col-6 m-1 rounded" v-for="(messaggio, indiceMessaggio) in contacts[counter].messages" :class="messaggio.status == 'sent' ? 'sent_message' : 'received_message'">
