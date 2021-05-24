@@ -126,9 +126,6 @@ img{
     height: 100%;
     overflow-y: hidden;
 }
-.messaggio p{
-
-}
 .sent_message{
     align-self: flex-end;
     background-color: #009688;
