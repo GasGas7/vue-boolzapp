@@ -123,10 +123,12 @@ const app = new Vue ({
         },
 
         searchContact(){
-            let contactList = []
-            this.contacts.forEach(element => {
-                console.log(element.name)
-                contactList.push(element.name)              
+            this.contacts.forEach(elemento, index => {
+                if(elemento.name != this.contactModel){
+                    this.contacts.splice(index, 1)
+                }
+                console.log(elemento.name)
+                contactList.push(elemento.name)              
             });
             console.log(contactList);
         }
