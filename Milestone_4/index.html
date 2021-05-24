@@ -51,7 +51,7 @@
                     <div class="col-">
                         <div class="search_bar d-flex align-items-center justify-content-between p-1" style="background-color: white;">
                             <i class="fas fa-search"></i>
-                            <input type="text" placeholder="Cerca o inizia una nuova chat">
+                            <input type="text" v-model="contactModel" placeholder="Cerca o inizia una nuova chat" @keyup="searchContact()">
                         </div>
                     </div>
                     <!-- /SearchBar -->
