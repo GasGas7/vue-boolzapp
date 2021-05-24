@@ -106,17 +106,24 @@ const app = new Vue ({
         },
 
         sentMessage(){
-            if(this.newMessage.length > 0) {
-                document.getElementById("elenco_messaggi").insertAdjacentHTML('beforeend',
-                `<div class="messaggio col-6 m-1 rounded sent_message"><p>${this.newMessage}</p></div>
-                `)
-                this.newMessage="";
-            }
-            setTimeout(function(){
-                let answerMessage="Ehi amico, certo ! Questa è la mia risposta dopo un solo secondo !!";
-                document.getElementById("elenco_messaggi").insertAdjacentHTML('beforeend',
-                `<div class="messaggio col-6 m-1 rounded received_message"><p>${answerMessage}</p></div>
-                `)
+            //variabile data attuale
+
+            this.contacts[this.counter].messages.push(
+                {
+                    date: "",
+                    text: this.newMessage,
+                    status: 'sent'
+                });
+                this.newMessage = "";
+                setTimeout(() => {
+                console.log("banana");
+                this.contacts[this.counter].messages.push(
+                    {   
+                        date:"",
+                        text:"Risposta dopo un solo secondo",
+                        status:'received'
+                    }
+                )
             },1000)
         },
 }})
