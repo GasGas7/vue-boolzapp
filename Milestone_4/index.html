@@ -58,7 +58,7 @@
 
                     <!-- Contacts -->
                     <div class="contatti">
-                        <div class="contatto" v-for="(contact, indiceContact) in contacts" @click="selectContact(indiceContact)">
+                        <div class="contatto" v-if=contact.visible v-for="(contact, indiceContact) in contacts" @click="selectContact(indiceContact)">
                             <div class="d-flex">
                                 <img class="img-fluid" :src="'./assets/img/avatar'+ contact.avatar + '.jpg'" alt="">
                                 <p>{{contact.name}}</p>

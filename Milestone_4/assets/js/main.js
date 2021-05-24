@@ -95,8 +95,6 @@ const app = new Vue ({
 
         newMessage:"",
 
-        newContacts:[],
-
         contactModel:"",
 
     },
@@ -125,15 +123,13 @@ const app = new Vue ({
         },
 
         searchContact(){
-            this.newContacts = this.contacts.filter((contatto)=> {
-                if(contatto.name.split("").includes(this.contactModel)){
-                    return console.log(this.newContacts)
+            this.contacts.forEach(element => {
+                if(element.name.toLowerCase().includes(this.contactModel.toLowerCase())){
+                    element.visible = true ;
+                } else {
+                    element.visible = false ;
                 }
-            }) 
+            })
            
         }
 }})
-
-
-// faccio una funzione con un parametro [array lista contatti].
-// Con un v-model ottengo il value dell'imput. se innertext dell''imput è uguale a uno della lista, return questa lista....
