@@ -58,7 +58,7 @@
 
                     <!-- Contacts -->
                     <div class="contatti">
-                        <div class="contatto" v-if=contact.visible v-for="(contact, indiceContact) in contacts" @click="selectContact(indiceContact)">
+                        <div class="contatto" v-if=contact.visible v-for="(contact, indiceContact) in contacts" @click="selectContact(indiceContact)" :class="counter == indiceContact ? 'active' : '' ">
                             <div class="d-flex">
                                 <img class="img-fluid" :src="'./assets/img/avatar'+ contact.avatar + '.jpg'" alt="">
                                 <p>{{contact.name}}</p>
@@ -93,12 +93,12 @@
 
                     <!-- Chat -->
                         <div class="chat col-12">
-                            <div class="lista_messaggi col-12">
+                            <div class="lista_messaggi">
                                 <div id="elenco_messaggi" class=" d-flex flex-column">
                                    <!-- messaggio -->
-                                   <div class="messaggio col-6 m-1 rounded" v-for="(messaggio, indiceMessaggio) in contacts[counter].messages" :class="messaggio.status == 'sent' ? 'sent_message' : 'received_message'">
+                                   <div class="d-flex flex-column messaggio col-6 m-1 rounded" v-for="(messaggio, indiceMessaggio) in contacts[counter].messages" :class="messaggio.status == 'sent' ? 'sent_message' : 'received_message'">
                                        <p>{{messaggio.text}}</p>
-                                       <p>{{messaggio.date}}</p>          
+                                       <p class="data_ora align-self-end">{{messaggio.date}}</p>          
                                    </div>
                                     <!-- /messaggio -->
                                </div>
@@ -126,7 +126,8 @@
         </div>
     </div>
 
-
+    <!-- DayJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/dayjs.min.js" integrity="sha512-0fcCRl828lBlrSCa8QJY51mtNqTcHxabaXVLPgw/jPA5Nutujh6CbTdDgRzl9aSPYW/uuE7c4SffFUQFBAy6lg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- VueJS script -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <!-- main.js script -->

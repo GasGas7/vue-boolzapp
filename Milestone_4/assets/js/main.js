@@ -108,16 +108,19 @@ const app = new Vue ({
         },
 
         sentMessage(){
+            const liveDate = dayjs().format('DD/MM/YYYY HH:mm:ss');
+            console.log(liveDate);
             if(this.newMessage.length > 0) {
                 document.getElementById("elenco_messaggi").insertAdjacentHTML('beforeend',
-                `<div class="messaggio col-6 m-1 rounded sent_message"><p>${this.newMessage}</p></div>
+                `<div class="d-flex flex-column messaggio col-6 m-1 rounded sent_message"><p>${this.newMessage}</p><p class="data_ora align-self-end">${liveDate}</p></div>
                 `)
                 this.newMessage="";
             }
             setTimeout(function(){
+                
                 let answerMessage="Ehi amico, certo ! Questa è la mia risposta dopo un solo secondo !!";
                 document.getElementById("elenco_messaggi").insertAdjacentHTML('beforeend',
-                `<div class="messaggio col-6 m-1 rounded received_message"><p>${answerMessage}</p></div>
+                `<div class="d-flex flex-column messaggio col-6 m-1 rounded received_message"><p>${answerMessage}</p><p class="data_ora align-self-end">${liveDate}</p></div>
                 `)
             },1000)
         },

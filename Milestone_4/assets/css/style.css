@@ -78,6 +78,7 @@ img{
 /* SearchBar */
 .search_bar{
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 .search_bar i{
     color: #B7B9BB;
@@ -96,12 +97,12 @@ img{
 .contatti{
     height: 100%;
     background-color: #FFFFFF;
-    padding-top: 20px;
-    padding-left: 15px;
     margin-right: -15px;
     margin-left: -15px;
-    margin-top: 10px;
     overflow-y: auto;
+}
+.contatto div:first-child{
+    padding: 10px 0 10px 15px;
 }
 .contatto img{
     width: 20%;
@@ -109,6 +110,9 @@ img{
 .contatto p{
     margin-left: 15px;
     font-weight: 500;
+}
+.contatto:hover{
+    background-color: #00b26da1;
 }
 /* /Contatti */
 /* <!-- /Sidebar User --> */
@@ -122,7 +126,9 @@ img{
     height: 100%;
     overflow-y: hidden;
 }
+.messaggio p{
 
+}
 .sent_message{
     align-self: flex-end;
     background-color: #009688;
@@ -170,4 +176,12 @@ img{
 .input_chat input::placeholder{
     padding-left:15px;
     font-size: 0.9rem;
+}
+.data_ora{
+    font-size: 15px;
+}
+.active{background-color: #009687d5;}
+
+hr{
+    margin: 0;
 }
