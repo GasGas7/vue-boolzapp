@@ -102,7 +102,7 @@
                                         <!-- show = !show -->
                                         <div class="cancel_message" v-if="messageActive.show == true && messageActive.indexMessaggio == indiceMessaggio" v-show="messageActive.show"> 
                                             <p>Info messaggio</p>
-                                            <p>Cancella messaggio</p>
+                                            <p @click="deleteMessage">Cancella messaggio</p>
                                         </div>
                                         
                                         <p>{{messaggio.text}}</p>

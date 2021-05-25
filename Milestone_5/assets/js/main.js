@@ -298,9 +298,16 @@ const app = new Vue ({
                 this.messageActive.indexMessaggio = indiceMsg;
                 this.messageActive.show = true;   
             }
-        }
+        },
 
-        
+        /**
+         * ### Delete courrent message function
+         * 
+         * This function delete the selected message from the array of object .messages
+         */
+        deleteMessage(){
+            this.contacts[this.counter].messages.splice(this.messageActive.indexMessaggio,1)
+        }
     }
 })
 
