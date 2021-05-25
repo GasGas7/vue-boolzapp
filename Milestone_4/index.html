@@ -97,9 +97,9 @@
                                 <div id="elenco_messaggi" class=" d-flex flex-column">
                                    <!-- messaggio -->
                                    <div class="d-flex flex-column messaggio col-6 m-1 rounded" v-for="(messaggio, indiceMessaggio) in contacts[counter].messages" :class="messaggio.status == 'sent' ? 'sent_message' : 'received_message'">
-                                       <p>{{messaggio.text}}</p>
-                                       <p class="data_ora align-self-end">{{messaggio.date}}</p>          
-                                   </div>
+                                        <p>{{messaggio.text}}</p>
+                                       <p class="data_ora align-self-end">{{messaggio.date}}</p>
+                                   </div>                                    
                                     <!-- /messaggio -->
                                </div>
                            </div>                            

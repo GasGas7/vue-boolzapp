@@ -214,7 +214,7 @@ const app = new Vue ({
         },
 
         /**
-         * ### Invia il messaggio
+         * ### Invia il messaggio + risposta automatica
          * 
          * La funzione permette di inviare un messaggio. Tramite v-model viene passato un value alla variabile @data-newMessage.
          * La funzione pusha nell'array di oggetti message un nuovo oggetto con : 
