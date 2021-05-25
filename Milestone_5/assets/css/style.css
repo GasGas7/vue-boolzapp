@@ -195,6 +195,10 @@ hr{
     z-index: 3;
     
 }
+.cancel_message p{
+    font-size: 15px;
+    margin-bottom: 5px;
+}
 .arrow_cancel{
     cursor: pointer;
 }
