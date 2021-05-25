@@ -195,11 +195,16 @@ const app = new Vue ({
 
         ],
 
+        messageActive:{
+            visible: false, 
+            show: true
+        },
+
         newMessage:"",
 
         contactModel:"",
 
-        show: false
+        
 
     },
 
@@ -207,7 +212,7 @@ const app = new Vue ({
         /**
          * ### Increase counter 
          * il contatore che incrementa all'incrementare del'indice che viene passato come parametro 
-         * @param {index} indice 
+         * @param {index} - indice 
          * @returns {counter} 
          */
         selectContact(indice){
@@ -270,13 +275,16 @@ const app = new Vue ({
            
         },
 
-        funzione(indice) {
-            console.log(indice);
-            this.counterMessage = indice;
-            console.log(this.contacts[this.counter].messages[this.counterMessage])
-            //if(this.contacts[this.counter].messages[this.counterMessage]){
-              //this.show = true 
+        openMenu(indiceMsg) {
+            console.log(indiceMsg);
+            console.log(this.messageActive.visible)
+            console.log()
+            if(this.contacts[this.counter].messages[this.indiceMsg] == false && messageActive.visible == false){
+                messageActive.visible = true;
             }
+            
+        }
+          
     
 }})
 

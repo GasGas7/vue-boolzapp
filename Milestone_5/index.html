@@ -98,9 +98,9 @@
                                    <!-- messaggio -->
                                    <div class="d-flex flex-column messaggio col-6 m-1 rounded" v-for="(messaggio, indiceMessaggio) in contacts[counter].messages" :class="messaggio.status == 'sent' ? 'sent_message' : 'received_message'">
                                        
-                                        <i class="arrow_cancel fas fa-chevron-down align-self-end" @click="funzione(indiceMessaggio)"></i>
+                                        <i class="arrow_cancel fas fa-chevron-down align-self-end"  @click="openMenu(indiceMessaggio)"></i>
                                         <!-- show = !show -->
-                                        <div class="cancel_message" v-show="show"> 
+                                        <div class="cancel_message" v-if="messageActive.visible == true" v-show="messageActive.show"> 
                                             <p>Info messaggio</p>
                                             <p>Cancella messaggio</p>
                                         </div>
