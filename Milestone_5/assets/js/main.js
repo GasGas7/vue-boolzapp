@@ -306,7 +306,11 @@ const app = new Vue ({
          * This function delete the selected message from the array of object .messages
          */
         deleteMessage(){
-            this.contacts[this.counter].messages.splice(this.messageActive.indexMessaggio,1)
+            let askConfirm = confirm("Sei sicuro di voler eliminare il messaggio ???");
+            if(askConfirm == true){
+            this.contacts[this.counter].messages.splice(this.messageActive.indexMessaggio,1);
+            this.messageActive.show = !this.messageActive.show;
+            } else {this.messageActive.show = !this.messageActive.show;}
         }
     }
 })
