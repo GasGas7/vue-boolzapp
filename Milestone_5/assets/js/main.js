@@ -5,6 +5,7 @@ const app = new Vue ({
     data:{
 
         counter:0,
+        counterMessage:0,
 
         contacts: [
             {
@@ -267,5 +268,15 @@ const app = new Vue ({
                 }
             })
            
-        }
+        },
+
+        funzione(indice) {
+            console.log(indice);
+            this.counterMessage = indice;
+            console.log(this.contacts[this.counter].messages[this.counterMessage])
+            //if(this.contacts[this.counter].messages[this.counterMessage]){
+              //this.show = true 
+            }
+    
 }})
+
