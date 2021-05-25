@@ -196,8 +196,8 @@ const app = new Vue ({
         ],
 
         messageActive:{
-            visible: false, 
-            show: true
+            indexMessaggio:"", 
+            show: false
         },
 
         newMessage:"",
@@ -275,16 +275,32 @@ const app = new Vue ({
            
         },
 
+        /**
+         * ### Funzione dropdown menu
+         * 
+         * 
+         * La funzione riceve in ingresso un indice.
+         * Ad ogni click esegue un controllo:
+         * Al primo click l'if non sarà mai verificato e si entra nell'else.(show = true)
+         * Al secondo click if si verifica se si clicka nuovamente sullo stesso tasto(show = false). 
+         * 
+         * Se si clicka su un'altro tasto si rientra nell'else. 
+         * La comparsa e la scomparsa del menu dipende dal *v-if="messageActive.show == true && messageActive.indexMessaggio == indiceMessaggio"* ----> il *div class="cancel_message"* viene mostrato solo al verificarsi di entrambe le condizioni.
+         * 
+         * 
+         * @param {number} indiceMsg è l'indice del messaggio che viene iterato dal v-for nell'html
+         */
         openMenu(indiceMsg) {
-            console.log(indiceMsg);
-            console.log(this.messageActive.visible)
-            console.log()
-            if(this.contacts[this.counter].messages[this.indiceMsg] == false && messageActive.visible == false){
-                messageActive.visible = true;
+            //console.log(indiceMsg);
+            if( indiceMsg == this.messageActive.indexMessaggio ){
+                this.messageActive.show = !this.messageActive.show;
+            } else {
+                this.messageActive.indexMessaggio = indiceMsg;
+                this.messageActive.show = true;   
             }
-            
         }
-          
-    
-}})
+
+        
+    }
+})
 
