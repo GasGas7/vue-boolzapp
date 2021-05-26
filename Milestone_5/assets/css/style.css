@@ -112,7 +112,7 @@ img{
     font-weight: 500;
 }
 .contatto:hover{
-    background-color: #00b26da1;
+    background-color: #c9ffa0;
 }
 /* /Contatti */
 /* <!-- /Sidebar User --> */
@@ -128,7 +128,7 @@ img{
 }
 .sent_message{
     align-self: flex-end;
-    background-color: #009688;
+    background-color: #D5F9BA;
 }
 .received_message{
     background-color: white;
@@ -177,7 +177,7 @@ img{
 .data_ora{
     font-size: 15px;
 }
-.active{background-color: #009687d5;}
+.active{background-color: #E9EBEB;}
 
 hr{
     margin: 0;
